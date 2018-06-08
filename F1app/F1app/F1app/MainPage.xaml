@@ -6,7 +6,7 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Fo   rms!" 
+    	<Label Text="Welcome to Xamarin.F   rms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     </StackLayout>
