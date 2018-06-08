@@ -1,23 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:F1app"
-             x:Class="F1app.MainPage">
+             x:Class="F1app.ListarPistas">
+  <!--Pages can be added as references or inline-->
+
 
     <StackLayout Padding="10, 20, 10 ,0">
         <Entry
-            x:Name="entryNameUser"
+            x:Name="entryNamePista"
             Placeholder="Ingresar nombre"/>
-        
-        <Button
-            Text="Crear nuevo usuario"
-            Clicked="ClickCreateUser"/>
-        <Button
-            Text="Listar usuarios"
-            Clicked="ClickListar"/>
-        <Button
-            Text="Listar pilotos"
-            Clicked="ClickListarPilotos"/>
 
         <Button
             Text="Listar pistas"
@@ -28,13 +19,13 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem CommandParameter="{Binding .}" Text="Actualizar" />
-                            <MenuItem CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                            <MenuItem  CommandParameter="{Binding .}" Text="Actualizar" />
+                            <MenuItem  CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
                         </ViewCell.ContextActions>
                         <StackLayout Padding="15,0">
-                          
-                            <Label Text="{Binding Password}" />
-                            <Label Text="{Binding LastName}" />
+
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding FirstGrandPrix}" />
 
                         </StackLayout>
                     </ViewCell>
@@ -42,4 +33,5 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
+
 </ContentPage>

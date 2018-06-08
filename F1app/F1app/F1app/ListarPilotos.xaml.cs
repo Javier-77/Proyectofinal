@@ -1,6 +1,5 @@
 ﻿using F1app.Model;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,21 +7,24 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace F1app
 {
-    public partial class MainPage : ContentPage
-	{
-
-        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ListarPilotos : ContentPage
+    {
+        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/pilotos";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<User> _user;
+        private ObservableCollection<Pilotos> _piloto;
 
-        public MainPage()
-		{
-			InitializeComponent();
-		}
+        public ListarPilotos ()
+        {
+        
+        InitializeComponent();
+        }
 
         protected override void OnAppearing()
         {
@@ -37,20 +39,20 @@ namespace F1app
         async public void ListData()
         {
             string content = await client.GetStringAsync(Url);
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(content);
-            _user = new ObservableCollection<User>(users);
-            listViewUsers.ItemsSource = _user;
+            List<Pilotos> pilotos = JsonConvert.DeserializeObject<List<Pilotos>>(content);
+            _piloto = new ObservableCollection<Pilotos>(pilotos);
+            listViewUsers.ItemsSource = _piloto;
         }
 
         async public void CreateUser()
         {
-            User user = new User()
+            Pilotos piloto = new Pilotos()
             {
                 Name = entryNameUser.Text,
-                
+
             };
 
-            var json = JsonConvert.SerializeObject(user);
+            var json = JsonConvert.SerializeObject(piloto);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = null;
@@ -65,16 +67,6 @@ namespace F1app
             response = await client.DeleteAsync(Url + "/" + position);
 
             ListData();
-        }
-
-        async public void ClickListarPilotos()
-        {
-            await Navigation.PushAsync(new ListarPilotos());
-        }
-
-        async public void ClickListarPistas()
-        {
-            await Navigation.PushAsync(new ListarPistas());
         }
 
 
@@ -92,9 +84,9 @@ namespace F1app
         public void ClickUpdateUser(object sender, EventArgs e)
         {
             var mi = sender as MenuItem;
-            var item = mi.BindingContext as User;
+            var item = mi.BindingContext as Pilotos;
 
-            User user = new User()
+            Pilotos pilotos = new Pilotos()
             {
                 Id = item.Id,
                 Name = item.Name
@@ -102,10 +94,5 @@ namespace F1app
 
             //showWindowUpdate(user);
         }
-
-        
-
-       
-
     }
 }

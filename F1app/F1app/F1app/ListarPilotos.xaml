@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F1app.ListarPilotos">
+  <!--Pages can be added as references or inline-->
+    <StackLayout Padding="10, 20, 10 ,0">
+         <Entry
+            x:Name="entryNameUser"
+            Placeholder="Ingresar nombre"/>
+
+        <Button
+            Text="Listar pilotos"
+            Clicked="ClickListar"/>
+        <ListView x:Name="listViewUsers">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem  CommandParameter="{Binding .}" Text="Actualizar" />
+                            <MenuItem  CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="15,0">
+
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Numero}" />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>

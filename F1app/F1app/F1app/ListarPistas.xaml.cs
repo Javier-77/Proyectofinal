@@ -1,6 +1,5 @@
 ﻿using F1app.Model;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,28 +7,31 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace F1app
 {
-    public partial class MainPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ListarPistas : ContentPage
+    {
 
-        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
+        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/pistas";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<User> _user;
+        private ObservableCollection<Pistas> _pista;
 
-        public MainPage()
-		{
-			InitializeComponent();
-		}
+        public ListarPistas ()
+        {
+            InitializeComponent();
+        }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
         }
 
-        public void ClickListar()
+        public void ClickListarPistas()
         {
             ListData();
         }
@@ -37,20 +39,20 @@ namespace F1app
         async public void ListData()
         {
             string content = await client.GetStringAsync(Url);
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(content);
-            _user = new ObservableCollection<User>(users);
-            listViewUsers.ItemsSource = _user;
+            List<Pistas> pistas = JsonConvert.DeserializeObject<List<Pistas>>(content);
+            _pista = new ObservableCollection<Pistas>(pistas);
+            listViewUsers.ItemsSource = _pista;
         }
 
         async public void CreateUser()
         {
-            User user = new User()
+            Pistas pista = new Pistas()
             {
-                Name = entryNameUser.Text,
-                
+                Name = entryNamePista.Text,
+
             };
 
-            var json = JsonConvert.SerializeObject(user);
+            var json = JsonConvert.SerializeObject(pista);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = null;
@@ -65,16 +67,6 @@ namespace F1app
             response = await client.DeleteAsync(Url + "/" + position);
 
             ListData();
-        }
-
-        async public void ClickListarPilotos()
-        {
-            await Navigation.PushAsync(new ListarPilotos());
-        }
-
-        async public void ClickListarPistas()
-        {
-            await Navigation.PushAsync(new ListarPistas());
         }
 
 
@@ -92,9 +84,9 @@ namespace F1app
         public void ClickUpdateUser(object sender, EventArgs e)
         {
             var mi = sender as MenuItem;
-            var item = mi.BindingContext as User;
+            var item = mi.BindingContext as Pistas;
 
-            User user = new User()
+            Pistas pistas = new Pistas()
             {
                 Id = item.Id,
                 Name = item.Name
@@ -102,10 +94,5 @@ namespace F1app
 
             //showWindowUpdate(user);
         }
-
-        
-
-       
-
     }
 }
