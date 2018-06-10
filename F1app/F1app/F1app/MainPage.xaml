@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:F1app"
              x:Class="F1app.MainPage">
+    
+    <!--
 
     <StackLayout Padding="10, 20, 10 ,0">
         <Entry
@@ -53,5 +55,101 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+    </StackLayout>-->
+
+    <!-- STACK PRINCIPAL-->
+    <StackLayout
+        Orientation="Horizontal"
+        Spacing="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="Start"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+
+        <!-- INICIO STACK CENTRAL-->
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Black">
+
+            <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="0"
+                BackgroundColor="Black"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+
+
+
+                <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="logo2nuevo.jpg"/>
+
+
+                <Entry
+                    x:Name="entryUsuario"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Usuario"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"/>
+
+                <Entry
+                    x:Name="entryPassword"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Contraseña"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
+                    IsPassword="True"/>
+
+                <Button
+                    x:Name="ingreso"
+                    Text="Ingresar"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="40,50,40,5"
+                    FontSize="Medium"
+                    Clicked="ClickButtonSignIn"/>
+                
+                <Button
+                    Text="Resgistrar"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="40,5,40,0"
+                    FontSize="Medium"
+                    Clicked="pasarRegistro"/>
+
+
+
+            </StackLayout>
+
+            <!-- FIN STACK CENTRAL SUPERIOR-->
+
+        </StackLayout>
+        <!-- FIN STACK CENTRAL-->
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="End"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
     </StackLayout>
+    <!-- STACK PRINCIPAL-->
+
+
+
+
 </ContentPage>

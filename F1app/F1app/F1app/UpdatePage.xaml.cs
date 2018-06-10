@@ -15,7 +15,8 @@ namespace F1app
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdatePage : ContentPage
     {
-        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
+        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/";
+        private const string UrlUpdateContact = Url + "users";
         private readonly HttpClient client = new HttpClient();
         private User user;
 

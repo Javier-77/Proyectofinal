@@ -25,7 +25,7 @@ namespace F1app
 		{
 			InitializeComponent();
 		}
-
+        /*
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -97,12 +97,12 @@ namespace F1app
                 Password = item.Password
             };
 
-            WindowUpdate();
+            ShowWindowUpdateUser(user);
         }
 
-        public async void WindowUpdate()
+        async public void ShowWindowUpdateUser(User user)
         {
-            await Navigation.PushAsync(new UpdatePage());
+            await Navigation.PushModalAsync(new UpdatePage());
         }
 
 
@@ -119,12 +119,71 @@ namespace F1app
             var mi = ((MenuItem)sender);
             DeleteUser(mi.CommandParameter.ToString());
         }
+        */
+
+        //LOGIN USUARIO
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (Application.Current.Properties.ContainsKey("id_user"))
+            {
+                //ShowWindowListContacts();
+                DisplayAlert("Info","mensaje para reconocer paso","OK");
+
+            }
+        }
+
+        async private void ClickButtonSignIn(object sender, EventArgs e)
+        {
+            User user = new User() { Name = entryUsuario.Text, Password = entryPassword.Text };
+
+            var json = JsonConvert.SerializeObject(user);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await client.PostAsync(Url, content);
+            string message = await response.Content.ReadAsStringAsync();
+            List<User> users = JsonConvert.DeserializeObject<List<User>>(message);
+
+            if (users[0].Success)
+            {
+                Application.Current.Properties["id_user"] = users[0].Id;
+                await ((NavigationPage)Parent).PushAsync(new Home());
+
+            }
+            else
+            {
+                await DisplayAlert("Error", "El usuario no existe", "OK");
+            }
+        }
+
+        //FIN LOGIN USUARIO
+
+
+
+
+        // INICIO BOTON PARA PASAR AL REGISTRO
+        private void pasarRegistro(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Registro());
+        }
+        // FIN BOTON PARA PASAR AL REGISTRO
+
+        /* INICIO BOTON PARA PASAR AL HOME
+        private void pasarHome(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Home());
+        }
+
+        // FIN BOTON PARA PASAR AL HOME*/
 
         
 
-        
 
-       
+
+
+
+
 
     }
 }

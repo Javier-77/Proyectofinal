@@ -6,6 +6,7 @@ namespace F1app.Model
 {
     class User
     {
+        public Boolean Success { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }

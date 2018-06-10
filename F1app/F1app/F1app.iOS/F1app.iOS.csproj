@@ -156,4 +156,10 @@
       <Name>F1app</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f1_nuevo_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgUsuario.jpg" />
+  </ItemGroup>
 </Project>
