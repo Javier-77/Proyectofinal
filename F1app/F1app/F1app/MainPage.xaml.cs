@@ -9,12 +9,14 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace F1app
 {
+
     public partial class MainPage : ContentPage
 	{
-
+        
         private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<User> _user;
@@ -47,6 +49,9 @@ namespace F1app
             User user = new User()
             {
                 Name = entryNameUser.Text,
+                LastName = entryLastName.Text,
+                Email = entryLastName.Text,
+                Password = entryPassword.Text
                 
             };
 
@@ -78,6 +83,32 @@ namespace F1app
         }
 
 
+        public void ClickUpdateUser(object sender, EventArgs e)
+        {
+            var mi = sender as MenuItem;
+            var item = mi.BindingContext as User;
+
+            User user = new User()
+            {
+                Id = item.Id,
+                Name = item.Name,
+                LastName = item.LastName,
+                Email = item.Email,
+                Password = item.Password
+            };
+
+            WindowUpdate();
+        }
+
+        public async void WindowUpdate()
+        {
+            await Navigation.PushAsync(new UpdatePage());
+        }
+
+
+
+
+
         public void ClickCreateUser(object sender, EventArgs e)
         {
             CreateUser();
@@ -89,19 +120,7 @@ namespace F1app
             DeleteUser(mi.CommandParameter.ToString());
         }
 
-        public void ClickUpdateUser(object sender, EventArgs e)
-        {
-            var mi = sender as MenuItem;
-            var item = mi.BindingContext as User;
-
-            User user = new User()
-            {
-                Id = item.Id,
-                Name = item.Name
-            };
-
-            //showWindowUpdate(user);
-        }
+        
 
         
 

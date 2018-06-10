@@ -92,6 +92,7 @@ namespace F1app
                 Name = item.Name
             };
 
+            DisplayAlert("Info","Usuario actualizado","OK");
             //showWindowUpdate(user);
         }
     }

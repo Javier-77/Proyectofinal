@@ -8,10 +8,22 @@
         <Entry
             x:Name="entryNameUser"
             Placeholder="Ingresar nombre"/>
+        <Entry
+            x:Name="entryLastName"
+            Placeholder="Ingresar apellido"/>
+        <Entry
+            x:Name="entryEmail"
+            Placeholder="Ingresar email"/>
+        <Entry
+            x:Name="entryPassword"
+            Placeholder="Ingresar password"/>
         
         <Button
             Text="Crear nuevo usuario"
             Clicked="ClickCreateUser"/>
+        <Button
+            Text="Actualizar usuario"
+            Clicked="ClickUpdateUser"/>
         <Button
             Text="Listar usuarios"
             Clicked="ClickListar"/>
@@ -28,8 +40,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem CommandParameter="{Binding .}" Text="Actualizar" />
-                            <MenuItem CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                            <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                            <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
                         </ViewCell.ContextActions>
                         <StackLayout Padding="15,0">
                           
