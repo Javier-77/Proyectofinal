@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F1app.CrearPiloto">
+  <!--Pages can be added as references or inline-->
+
+    <!-- STACK PRINCIPAL-->
+    <StackLayout
+        Orientation="Horizontal"
+        Spacing="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="Start"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+
+        <!-- INICIO STACK CENTRAL-->
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="White">
+
+            <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
+
+                <!-- -->
+                <StackLayout Padding="10, 0, 10 ,0">
+
+                <Entry
+                    Placeholder="Nombre"
+                    />
+                <Entry
+                    Placeholder="Apellido"
+                    />
+                <Entry
+                    Placeholder="Numero"
+                    />
+                <Entry
+                    Placeholder="Escuderia"
+                    />
+                <Entry
+                    Placeholder="Pais"
+                    />
+                <Entry
+                    Placeholder="Fecha de nacimiento"
+                    />
+                <Entry
+                    Placeholder="Lugar de nacimiento"
+                    />
+
+
+                <Button
+                        Text="Crear"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="40,0,40,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        VerticalOptions="End"/>
+                    <Button
+                        Text="Cancelar"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="40,10,40,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        VerticalOptions="End"/>
+                    
+                </StackLayout>
+
+
+                <!-- -->
+
+
+            
+
+            <!-- FIN STACK CENTRAL SUPERIOR-->
+
+        </StackLayout>
+        <!-- FIN STACK CENTRAL-->
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="End"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+    </StackLayout>
+    <!-- STACK PRINCIPAL-->
+
+</ContentPage>

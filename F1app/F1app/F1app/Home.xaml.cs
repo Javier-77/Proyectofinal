@@ -16,5 +16,15 @@ namespace F1app
         {
             InitializeComponent();
         }
+
+        async public void listaPilotos()
+        {
+            await((NavigationPage)Parent).PushAsync(new ListaPilotos());
+        }
+
+        async public void ClickListarUsuarios()
+        {
+            await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
+        }
     }
 }

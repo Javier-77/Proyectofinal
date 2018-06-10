@@ -17,7 +17,8 @@ namespace F1app
     public partial class MainPage : ContentPage
 	{
         
-        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
+        private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/";
+        private const string UrlValidarUser = Url + "validateUser";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<User> _user;
 
@@ -34,19 +35,19 @@ namespace F1app
             if (Application.Current.Properties.ContainsKey("id_user"))
             {
                 //ShowWindowListContacts();
-                DisplayAlert("Info","mensaje para reconocer paso","OK");
+                ((NavigationPage)Parent).PushAsync(new Home());
 
             }
         }
 
         async private void ClickButtonSignIn(object sender, EventArgs e)
-        {/*
-            User user = new User() { Name = entryUsuario.Text, Password = entryPassword.Text };
+        {
+            User user = new User() { UserName = entryUsuario.Text, Password = entryPassword.Text };
 
             var json = JsonConvert.SerializeObject(user);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpResponseMessage response = await client.PostAsync(Url, content);
+            HttpResponseMessage response = await client.PostAsync(UrlValidarUser, content);
             string message = await response.Content.ReadAsStringAsync();
             List<User> users = JsonConvert.DeserializeObject<List<User>>(message);
 
@@ -54,14 +55,14 @@ namespace F1app
             {
                 Application.Current.Properties["id_user"] = users[0].Id;
 
-                await DisplayAlert("Info", "usuario confirmado", "OK");
-                //*/await ((NavigationPage)Parent).PushAsync(new Home());
-            /*
+                //await DisplayAlert("Info", "usuario confirmado", "OK");
+                await ((NavigationPage)Parent).PushAsync(new Home());
+            
             }
             else
             {
                 await DisplayAlert("Error", "El usuario no existe", "OK");
-            }*/
+            }
         }
 
         //FIN LOGIN USUARIO
@@ -70,10 +71,11 @@ namespace F1app
 
 
         // INICIO BOTON PARA PASAR AL REGISTRO
+        /*
         private void pasarRegistro(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new Registro());
-        }
+        }*/
         // FIN BOTON PARA PASAR AL REGISTRO
 
         /* INICIO BOTON PARA PASAR AL HOME
@@ -84,7 +86,10 @@ namespace F1app
 
         // FIN BOTON PARA PASAR AL HOME*/
 
-        
+        async public void ClickListarUsuarios()
+        {
+            await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
+        }
 
 
 

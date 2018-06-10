@@ -129,8 +129,18 @@
                     TextColor="White"
                     Margin="40,5,40,0"
                     FontSize="Medium"
-                    Clicked="pasarRegistro"
+                    Clicked="ClickButtonSignIn"
                     BorderRadius="20"/>
+
+                <Button
+                    x:Name="listUsuarios"
+                    Text="Escuderias"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    BorderRadius="20"
+                        Clicked="ClickListarUsuarios"/>
 
 
 

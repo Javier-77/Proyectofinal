@@ -14,16 +14,15 @@ using Xamarin.Forms.Xaml;
 namespace F1app
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListarPilotos : ContentPage
+    public partial class ListaPilotos : ContentPage
     {
         private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/pilotos";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<Pilotos> _piloto;
 
-        public ListarPilotos ()
+        public ListaPilotos ()
         {
-        
-        InitializeComponent();
+            InitializeComponent();
         }
 
         protected override void OnAppearing()
@@ -48,7 +47,7 @@ namespace F1app
         {
             Pilotos piloto = new Pilotos()
             {
-                Name = entryNameUser.Text,
+                //Name = entryNameUser.Text,
 
             };
 
@@ -93,6 +92,11 @@ namespace F1app
             };
 
             //showWindowUpdate(user);
+        }
+
+        async public void CrearPiloto()
+        {
+            await((NavigationPage)Parent).PushAsync(new CrearPiloto());
         }
     }
 }

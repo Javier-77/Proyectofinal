@@ -56,6 +56,14 @@
                     VerticalOptions="CenterAndExpand">
 
                     <Entry
+                    x:Name="entryUserName"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Nombre de usuario"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"/>
+                    
+                    <Entry
                         x:Name="entryName"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"

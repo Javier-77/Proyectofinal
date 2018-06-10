@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F1app.ListaUsuarios">
+  <!--Pages can be added as references or inline-->
+
+    <!-- STACK PRINCIPAL-->
+    <StackLayout
+        Orientation="Horizontal"
+        Spacing="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="Start"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+
+        <!-- INICIO STACK CENTRAL-->
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Black">
+
+            <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="0"
+                BackgroundColor="White"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+
+                <!-- -->
+                <StackLayout Padding="10, 0, 10 ,0">
+  
+                    <Button
+                        Text="Listar Usuarios"
+                        Clicked="ClickListarUsuarios"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="40,10,40,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        />
+                    <ListView x:Name="listViewUsers">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem  Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                                        <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                                    </ViewCell.ContextActions>
+                                    <StackLayout Padding="15,0">
+
+                                        <Label Text="{Binding UserName}" TextColor="Black"/>
+                                        <Label Text="{Binding Password}" TextColor="Black"/>
+                                        
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+
+                <!-- -->
+
+
+            </StackLayout>
+
+            <!-- FIN STACK CENTRAL SUPERIOR-->
+
+        </StackLayout>
+        <!-- FIN STACK CENTRAL-->
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="End"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+    </StackLayout>
+    <!-- STACK PRINCIPAL-->
+
+</ContentPage>

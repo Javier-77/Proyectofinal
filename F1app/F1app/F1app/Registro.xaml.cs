@@ -37,6 +37,7 @@ namespace F1app
         {
             User user = new User()
             {
+                UserName=entryUserName.Text,
                 Name = entryName.Text,
                 LastName = entryLastName.Text,
                 Email = entryEmail.Text,
