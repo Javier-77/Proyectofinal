@@ -1,9 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="F1app.Home">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
-</TabbedPage>
+
+
+    <!-- STACK PRINCIPAL-->
+    <StackLayout
+        Orientation="Horizontal"
+        Spacing="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="Start"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+
+        <!-- INICIO STACK CENTRAL-->
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Black">
+
+            <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="0"
+                BackgroundColor="Black"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+
+
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="0"
+                    VerticalOptions="Start"
+                    >
+                    <ScrollView
+                        Orientation="Horizontal">
+                        <StackLayout
+                            Orientation="Horizontal">
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image11.img.1024.medium.jpg/1527498517130.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image1.img.1024.medium.jpg/1527498539662.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image1.img.1024.medium.jpg/1527779215271.jpg"/>
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image11.img.1024.medium.jpg/1527776983299.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1722169680/image11.img.1024.medium.jpg/1527779777314.jpg"/>
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_973254019/image2.img.1024.medium.jpg/1527600488196.jpg"/>
+
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_1126180649/image2.img.1024.medium.jpg/1527600659319.jpg"/>
+
+
+                        </StackLayout>
+
+                    </ScrollView>
+
+
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand">
+
+                    <Button
+                    x:Name="ListPistas"
+                    Text="Pistas"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+
+                    <Button
+                    x:Name="ListCorredores"
+                    Text="Corredores"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+                    <Button
+                    x:Name="listEscuderias"
+                    Text="Escuderias"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+                    <Button
+                    x:Name="listCarreras"
+                    Text="Carreras"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+                    <Button
+                    x:Name="clasCorredores"
+                    Text="Clasificación corredores"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+
+                    <Button
+                    x:Name="clasConstruc"
+                    Text="Clasificacion constructores"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+
+                    <Button
+                    x:Name="regresar"
+                    Text="Regresar"
+                    BackgroundColor="#B40404"
+                    TextColor="White"
+                    Margin="10,10,10,0"
+                    FontSize="Medium"
+                    />
+
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <!-- FIN STACK CENTRAL SUPERIOR-->
+
+        </StackLayout>
+        <!-- FIN STACK CENTRAL-->
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="End"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+    </StackLayout>
+    <!-- STACK PRINCIPAL-->
+
+
+
+</ContentPage>

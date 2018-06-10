@@ -120,7 +120,8 @@
                     TextColor="White"
                     Margin="40,50,40,5"
                     FontSize="Medium"
-                    Clicked="ClickButtonSignIn"/>
+                    Clicked="ClickButtonSignIn"
+                    BorderRadius="20"/>
                 
                 <Button
                     Text="Resgistrar"
@@ -128,7 +129,8 @@
                     TextColor="White"
                     Margin="40,5,40,0"
                     FontSize="Medium"
-                    Clicked="pasarRegistro"/>
+                    Clicked="pasarRegistro"
+                    BorderRadius="20"/>
 
 
 

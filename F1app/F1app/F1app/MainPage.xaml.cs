@@ -25,101 +25,6 @@ namespace F1app
 		{
 			InitializeComponent();
 		}
-        /*
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
-
-        public void ClickListar()
-        {
-            ListData();
-        }
-
-        async public void ListData()
-        {
-            string content = await client.GetStringAsync(Url);
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(content);
-            _user = new ObservableCollection<User>(users);
-            listViewUsers.ItemsSource = _user;
-        }
-
-        async public void CreateUser()
-        {
-            User user = new User()
-            {
-                Name = entryNameUser.Text,
-                LastName = entryLastName.Text,
-                Email = entryLastName.Text,
-                Password = entryPassword.Text
-                
-            };
-
-            var json = JsonConvert.SerializeObject(user);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = null;
-            response = await client.PostAsync(Url, content);
-
-            ListData();
-        }
-
-        async public void DeleteUser(string position)
-        {
-            HttpResponseMessage response = null;
-            response = await client.DeleteAsync(Url + "/" + position);
-
-            ListData();
-        }
-
-        async public void ClickListarPilotos()
-        {
-            await Navigation.PushAsync(new ListarPilotos());
-        }
-
-        async public void ClickListarPistas()
-        {
-            await Navigation.PushAsync(new ListarPistas());
-        }
-
-
-        public void ClickUpdateUser(object sender, EventArgs e)
-        {
-            var mi = sender as MenuItem;
-            var item = mi.BindingContext as User;
-
-            User user = new User()
-            {
-                Id = item.Id,
-                Name = item.Name,
-                LastName = item.LastName,
-                Email = item.Email,
-                Password = item.Password
-            };
-
-            ShowWindowUpdateUser(user);
-        }
-
-        async public void ShowWindowUpdateUser(User user)
-        {
-            await Navigation.PushModalAsync(new UpdatePage());
-        }
-
-
-
-
-
-        public void ClickCreateUser(object sender, EventArgs e)
-        {
-            CreateUser();
-        }
-
-        public void ClickDeleteUser(object sender, EventArgs e)
-        {
-            var mi = ((MenuItem)sender);
-            DeleteUser(mi.CommandParameter.ToString());
-        }
-        */
 
         //LOGIN USUARIO
         protected override void OnAppearing()
@@ -135,7 +40,7 @@ namespace F1app
         }
 
         async private void ClickButtonSignIn(object sender, EventArgs e)
-        {
+        {/*
             User user = new User() { Name = entryUsuario.Text, Password = entryPassword.Text };
 
             var json = JsonConvert.SerializeObject(user);
@@ -148,13 +53,15 @@ namespace F1app
             if (users[0].Success)
             {
                 Application.Current.Properties["id_user"] = users[0].Id;
-                await ((NavigationPage)Parent).PushAsync(new Home());
 
+                await DisplayAlert("Info", "usuario confirmado", "OK");
+                //*/await ((NavigationPage)Parent).PushAsync(new Home());
+            /*
             }
             else
             {
                 await DisplayAlert("Error", "El usuario no existe", "OK");
-            }
+            }*/
         }
 
         //FIN LOGIN USUARIO

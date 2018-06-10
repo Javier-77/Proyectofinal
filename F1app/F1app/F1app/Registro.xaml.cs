@@ -50,7 +50,12 @@ namespace F1app
             HttpResponseMessage response = null;
             response = await client.PostAsync(Url, content);
 
-            DisplayAlert("Felicidades","El usuario fue creado correctamente","OK");
+            entryName.Text = " ";
+            entryLastName.Text = "";
+            entryEmail.Text = "";
+            entryPassword.Text = "";
+
+            await DisplayAlert("Felicidades","El usuario fue creado correctamente","OK");
 
         }
     }
