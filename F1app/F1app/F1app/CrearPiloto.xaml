@@ -32,25 +32,63 @@
                 <StackLayout Padding="10, 0, 10 ,0">
 
                 <Entry
-                    Placeholder="Nombre"
-                    />
+                    x:Name="entryName"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Nombre piloto"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"/>
+                    
                 <Entry
-                    Placeholder="Apellido"
+                    x:Name="entryLastName"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Apellido piloto"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
+                    
                 <Entry
-                    Placeholder="Numero"
+                    x:Name="entryNumero"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Numero piloto"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
+                    
                 <Entry
                     Placeholder="Escuderia"
+                    x:Name="entryEscuderia"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
+                    
                 <Entry
                     Placeholder="Pais"
+                    x:Name="entryPais"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
                 <Entry
                     Placeholder="Fecha de nacimiento"
+                    x:Name="entryFechaNacimiento"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
                 <Entry
                     Placeholder="Lugar de nacimiento"
+                    x:Name="entryLugarNacimiento"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"
                     />
 
 
@@ -61,7 +99,9 @@
                         Margin="40,0,40,5"
                         FontSize="Medium"
                         BorderRadius="20"
-                        VerticalOptions="End"/>
+                        VerticalOptions="End"
+                    Clicked="ClickButtonCreatePiloto"/>
+                    
                     <Button
                         Text="Cancelar"
                         BackgroundColor="#B40404"
@@ -69,7 +109,8 @@
                         Margin="40,10,40,5"
                         FontSize="Medium"
                         BorderRadius="20"
-                        VerticalOptions="End"/>
+                        VerticalOptions="End"
+                        Clicked="CancelarRegresar"/>
                     
                 </StackLayout>
 
