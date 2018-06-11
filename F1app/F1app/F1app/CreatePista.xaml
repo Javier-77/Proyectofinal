@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="F1app.Registro">
+             x:Class="F1app.CreatePista">
   <!--Pages can be added as references or inline-->
 
     <!-- STACK PRINCIPAL-->
@@ -42,10 +42,10 @@
                     VerticalOptions="Start">
 
                     <Image
-                    HeightRequest="150"
-                    WidthRequest="150"
+                    HeightRequest="130"
+                    WidthRequest="130"
                     Margin="0,10,0,10"
-                    Source="imgUsuario.jpg"/>
+                    Source="agregarPista.jpg"/>
 
                 </StackLayout>
 
@@ -56,42 +56,50 @@
                     VerticalOptions="CenterAndExpand">
 
                     <Entry
-                    x:Name="entryUserName"
+                    x:Name="entryName"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Nombre de usuario"
-                    PlaceholderColor="Gray"
-                    Margin="10,10,10,0"/>
-                    
-                    <Entry
-                        x:Name="entryName"
-                    BackgroundColor="#F2F2F2"
-                    TextColor="Black"
-                    Placeholder="Nombre"
+                    Placeholder="Nombre pista"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"/>
 
                     <Entry
-                        x:Name="entryLastName"
+                        x:Name="entryFirstGrandPrix"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Apellido"
+                    Placeholder="Fecha de primera carrera"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"/>
 
                     <Entry
-                        x:Name="entryEmail"
+                        x:Name="entryVueltas"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Email"
+                    Placeholder="Numero de vueltas"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"/>
 
                     <Entry
-                        x:Name="entryPassword"
+                        x:Name="entryCircuit"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Contraseña"
+                    Placeholder="Km de pista"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"/>
+
+                    <Entry
+                        x:Name="entryDistance"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Distancia de carrera"
+                    PlaceholderColor="Gray"
+                    Margin="10,10,10,0"/>
+
+                    <Entry
+                        x:Name="entryCountry"
+                    BackgroundColor="#F2F2F2"
+                    TextColor="Black"
+                    Placeholder="Pais"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"/>
                 </StackLayout>
@@ -101,14 +109,14 @@
                     Orientation="Vertical"
                     Spacing="0"
                     VerticalOptions="End">
-                    
+
                     <Button
-                    Text="Crear nuevo usuario"
+                    Text="Crear nueva pista"
                     BackgroundColor="#B40404"
                     TextColor="White"
                     Margin="10,10,10,0"
                     FontSize="Medium"
-                        Clicked="ClickButtonCreateContact"
+                        Clicked="ClickButtonCreatePista"
                     />
 
                     <Button
@@ -138,7 +146,6 @@
         <!-- FIN STACK DERECHA-->
     </StackLayout>
     <!-- STACK PRINCIPAL-->
-
 
 
 

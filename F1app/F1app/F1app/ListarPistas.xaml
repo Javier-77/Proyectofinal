@@ -4,11 +4,11 @@
              x:Class="F1app.ListarPistas">
   <!--Pages can be added as references or inline-->
 
-
+<!-- 
     <StackLayout Padding="10, 20, 10 ,0">
-        <Entry
-            x:Name="entryNamePista"
-            Placeholder="Ingresar nombre"/>
+        <Button
+            Text="Crear pista"
+            Clicked="CrearPista"/>
 
         <Button
             Text="Listar pistas"
@@ -25,7 +25,7 @@
                         <StackLayout Padding="15,0">
 
                             <Label Text="{Binding Name}" />
-                            <Label Text="{Binding FirstGrandPrix}" />
+                            <Label Text="{Binding CountryPrix}" />
 
                         </StackLayout>
                     </ViewCell>
@@ -33,5 +33,154 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
+-->
+
+    <!-- STACK PRINCIPAL-->
+    <StackLayout
+        Orientation="Horizontal"
+        Spacing="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="Start"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+
+        <!-- INICIO STACK CENTRAL-->
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Black">
+
+            <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="0"
+                BackgroundColor="White"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150">
+
+
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="0"
+                    VerticalOptions="Start"
+                    >
+                    <ScrollView
+                        Orientation="Horizontal">
+                        <StackLayout
+                            Orientation="Horizontal">
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image11.img.1024.medium.jpg/1527498517130.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image1.img.1024.medium.jpg/1527498539662.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image1.img.1024.medium.jpg/1527779215271.jpg"/>
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image11.img.1024.medium.jpg/1527776983299.jpg"/>
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1722169680/image11.img.1024.medium.jpg/1527779777314.jpg"/>
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_973254019/image2.img.1024.medium.jpg/1527600488196.jpg"/>
+
+
+                            <Image
+                    HeightRequest="250"
+                    WidthRequest="250"
+                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_1126180649/image2.img.1024.medium.jpg/1527600659319.jpg"/>
+
+
+                        </StackLayout>
+
+                    </ScrollView>
+
+
+                </StackLayout>
+
+                <!-- -->
+                <StackLayout Padding="10, 0, 10 ,0">
+
+                    <Button
+                        Text="Crear pista"
+                        Clicked="CrearPista"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="40,0,40,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        />
+                    <Button
+                        Text="Listar pistas"
+                        Clicked="ClickListarPistas"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="40,10,40,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        />
+                    <ListView x:Name="listViewUsers">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                                        <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                                    </ViewCell.ContextActions>
+                                    <StackLayout Padding="15,0">
+
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="{Binding CountryPrix}" />
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+
+                <!-- -->
+
+
+            </StackLayout>
+
+            <!-- FIN STACK CENTRAL SUPERIOR-->
+
+        </StackLayout>
+        <!-- FIN STACK CENTRAL-->
+
+        <!-- INICIO STACK DERECHA-->
+        <BoxView
+            HorizontalOptions="End"
+            BackgroundColor="Red"
+            WidthRequest="10"
+            />
+        <!-- FIN STACK DERECHA-->
+    </StackLayout>
+    <!-- STACK PRINCIPAL-->
+
+
+
 
 </ContentPage>

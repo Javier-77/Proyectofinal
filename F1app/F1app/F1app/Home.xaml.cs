@@ -22,6 +22,11 @@ namespace F1app
             await((NavigationPage)Parent).PushAsync(new ListaPilotos());
         }
 
+        async public void pasarPistas()
+        {
+            await ((NavigationPage)Parent).PushAsync(new ListarPistas());
+        }
+
         async public void ClickListarUsuarios()
         {
             await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());

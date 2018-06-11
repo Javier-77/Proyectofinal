@@ -100,7 +100,8 @@
                     TextColor="White"
                     Margin="10,10,10,0"
                     FontSize="Medium"
-                    BorderRadius="20"/>
+                    BorderRadius="20"
+                    Clicked="pasarPistas"/>
 
                     <Button
                     x:Name="ListCorredores"

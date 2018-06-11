@@ -44,23 +44,6 @@ namespace F1app
             listViewUsers.ItemsSource = _pista;
         }
 
-        async public void CreateUser()
-        {
-            Pistas pista = new Pistas()
-            {
-                Name = entryNamePista.Text,
-
-            };
-
-            var json = JsonConvert.SerializeObject(pista);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = null;
-            response = await client.PostAsync(Url, content);
-
-            ListData();
-        }
-
         async public void DeleteUser(string position)
         {
             HttpResponseMessage response = null;
@@ -68,13 +51,7 @@ namespace F1app
 
             ListData();
         }
-
-
-        public void ClickCreateUser(object sender, EventArgs e)
-        {
-            CreateUser();
-        }
-
+        
         public void ClickDeleteUser(object sender, EventArgs e)
         {
             var mi = ((MenuItem)sender);
@@ -94,6 +71,11 @@ namespace F1app
 
             DisplayAlert("Info","Usuario actualizado","OK");
             //showWindowUpdate(user);
+        }
+
+        async public void CrearPista()
+        {
+            await ((NavigationPage)Parent).PushAsync(new CreatePista());
         }
     }
 }

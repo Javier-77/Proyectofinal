@@ -4,59 +4,7 @@
              xmlns:local="clr-namespace:F1app"
              x:Class="F1app.MainPage">
     
-    <!--
-
-    <StackLayout Padding="10, 20, 10 ,0">
-        <Entry
-            x:Name="entryNameUser"
-            Placeholder="Ingresar nombre"/>
-        <Entry
-            x:Name="entryLastName"
-            Placeholder="Ingresar apellido"/>
-        <Entry
-            x:Name="entryEmail"
-            Placeholder="Ingresar email"/>
-        <Entry
-            x:Name="entryPassword"
-            Placeholder="Ingresar password"/>
-        
-        <Button
-            Text="Crear nuevo usuario"
-            Clicked="ClickCreateUser"/>
-        <Button
-            Text="Actualizar usuario"
-            Clicked="ClickUpdateUser"/>
-        <Button
-            Text="Listar usuarios"
-            Clicked="ClickListar"/>
-        <Button
-            Text="Listar pilotos"
-            Clicked="ClickListarPilotos"/>
-
-        <Button
-            Text="Listar pistas"
-            Clicked="ClickListarPistas"/>
-        
-        <ListView x:Name="listViewUsers">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
-                            <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
-                        </ViewCell.ContextActions>
-                        <StackLayout Padding="15,0">
-                          
-                            <Label Text="{Binding Password}" />
-                            <Label Text="{Binding LastName}" />
-
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>-->
-
+    
     <!-- STACK PRINCIPAL-->
     <StackLayout
         Orientation="Horizontal"
@@ -133,18 +81,6 @@
                     FontSize="Medium"
                     Clicked="pasarRegistro"
                     BorderRadius="20"/>
-
-                <Button
-                    x:Name="listUsuarios"
-                    Text="Escuderias"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,0"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                        Clicked="ClickListarUsuarios"/>
-
-
 
             </StackLayout>
 

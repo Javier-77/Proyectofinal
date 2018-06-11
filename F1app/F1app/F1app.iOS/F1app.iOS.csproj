@@ -162,4 +162,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\imgUsuario.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\agregarPista.jpg" />
+  </ItemGroup>
 </Project>

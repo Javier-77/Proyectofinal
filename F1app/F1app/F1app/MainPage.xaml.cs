@@ -20,7 +20,7 @@ namespace F1app
         private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/";
         private const string UrlValidarUser = Url + "validateUser";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<User> _user;
+        
 
         public MainPage()
 		{
@@ -76,25 +76,6 @@ namespace F1app
             ((NavigationPage)this.Parent).PushAsync(new Registro());
         }
         // FIN BOTON PARA PASAR AL REGISTRO
-
-        /* INICIO BOTON PARA PASAR AL HOME
-        private void pasarHome(object sender, EventArgs e)
-        {
-            ((NavigationPage)this.Parent).PushAsync(new Home());
-        }
-
-        // FIN BOTON PARA PASAR AL HOME*/
-
-        async public void ClickListarUsuarios()
-        {
-            await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
-        }
-
-
-
-
-
-
-
+        
     }
 }

@@ -23,7 +23,7 @@ namespace F1app
         public UpdatePage()
         {
             InitializeComponent();
-            this.user = user;
+            //user = user;
             BindingContext = user;
             
         }

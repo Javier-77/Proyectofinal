@@ -20,7 +20,7 @@ namespace F1app
 
         private const string Url = "https://javierjdapiproyectofinal.herokuapp.com/users";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<User> _user;
+        //private ObservableCollection<User> _user;
 
 
         public Registro ()
@@ -51,12 +51,19 @@ namespace F1app
             HttpResponseMessage response = null;
             response = await client.PostAsync(Url, content);
 
-            entryName.Text = " ";
+            entryUserName.Text = "";
+            entryName.Text = "";
             entryLastName.Text = "";
             entryEmail.Text = "";
             entryPassword.Text = "";
 
             await DisplayAlert("Felicidades","El usuario fue creado correctamente","OK");
+
+        }
+
+        async public void CancelarRegresar()
+        {
+            await ((NavigationPage)Parent).PushAsync(new MainPage());
 
         }
     }
