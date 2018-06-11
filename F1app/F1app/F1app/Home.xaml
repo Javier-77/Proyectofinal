@@ -150,13 +150,14 @@
                     BorderRadius="20"/>
 
                     <Button
-                    x:Name="regresar"
-                    Text="Regresar"
+                    x:Name="CerrarSesion"
+                    Text="Cerrar sesion"
                     BackgroundColor="#B40404"
                     TextColor="White"
                     Margin="10,10,10,0"
                     FontSize="Medium"
-                    BorderRadius="20"/>
+                    BorderRadius="20"
+                      Clicked="ClickButtonSignOff"  />
 
 
                 </StackLayout>

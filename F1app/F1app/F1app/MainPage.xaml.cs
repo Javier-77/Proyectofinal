@@ -54,10 +54,11 @@ namespace F1app
             if (users[0].Success)
             {
                 Application.Current.Properties["id_user"] = users[0].Id;
-
-                //await DisplayAlert("Info", "usuario confirmado", "OK");
-                await ((NavigationPage)Parent).PushAsync(new Home());
-            
+                //ShowWindowListContacts();
+                await ((NavigationPage)this.Parent).PushAsync(new Home());
+                entryUsuario.Text = "";
+                entryPassword.Text = "";
+                
             }
             else
             {
@@ -68,14 +69,12 @@ namespace F1app
         //FIN LOGIN USUARIO
 
 
-
-
         // INICIO BOTON PARA PASAR AL REGISTRO
-        /*
+
         private void pasarRegistro(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new Registro());
-        }*/
+        }
         // FIN BOTON PARA PASAR AL REGISTRO
 
         /* INICIO BOTON PARA PASAR AL HOME

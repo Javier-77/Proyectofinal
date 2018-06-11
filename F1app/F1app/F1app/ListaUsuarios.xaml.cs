@@ -31,10 +31,10 @@ namespace F1app
             base.OnAppearing();
         }
 
-        public void ClickListarUsuarios()
+        /*public void ListarUsuarios()
         {
             ListData();
-        }
+        }*/
 
         async public void ListData()
         {

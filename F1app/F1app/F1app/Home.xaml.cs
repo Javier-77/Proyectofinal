@@ -26,5 +26,13 @@ namespace F1app
         {
             await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
         }
+
+        //CERRAR SESION
+        async public void ClickButtonSignOff(object sender, EventArgs e)
+        {
+            Application.Current.Properties.Clear();
+            await ((NavigationPage)this.Parent).PushAsync(new MainPage());
+        }
+        //FIN CERRAR SESION
     }
 }

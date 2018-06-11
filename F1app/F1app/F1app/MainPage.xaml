@@ -98,6 +98,7 @@
 
                 <Entry
                     x:Name="entryUsuario"
+                    Text="{Binding User.UserName, Mode=TwoWay}"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
                     Placeholder="Usuario"
@@ -106,6 +107,7 @@
 
                 <Entry
                     x:Name="entryPassword"
+                    Text="{Binding User.Password,Mode=TwoWay}"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
                     Placeholder="Contraseña"
@@ -129,7 +131,7 @@
                     TextColor="White"
                     Margin="40,5,40,0"
                     FontSize="Medium"
-                    Clicked="ClickButtonSignIn"
+                    Clicked="pasarRegistro"
                     BorderRadius="20"/>
 
                 <Button

@@ -40,7 +40,7 @@
   
                     <Button
                         Text="Listar Usuarios"
-                        Clicked="ClickListarUsuarios"
+                        Clicked="ListData"
                         BackgroundColor="#B40404"
                         TextColor="White"
                         Margin="40,10,40,5"
