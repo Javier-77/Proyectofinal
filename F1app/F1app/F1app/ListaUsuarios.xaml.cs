@@ -75,13 +75,13 @@ namespace F1app
                 Password = item.Password
             };
 
-            //showWindowUpdate(user);
+           //showWindowUpdate(user);
         }
 
-        //async public void showWindowUpdate(User user)
-        //{
-        //    await Navigation.PushAsync(new UpdatePage(user));
-        //}
+       //async public void showWindowUpdate(User user)
+       // {
+       //    await Navigation.PushAsync(new UpdatePage(user));
+       // }
 
         async public void CrearPiloto()
         {

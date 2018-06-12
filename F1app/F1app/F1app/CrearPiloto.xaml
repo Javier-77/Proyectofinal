@@ -25,12 +25,13 @@
             Orientation="Vertical"
             Spacing="0"
             HorizontalOptions="FillAndExpand"
-            BackgroundColor="White">
+            BackgroundColor="Black">
 
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
 
                 <!-- -->
-                <StackLayout Padding="10, 0, 10 ,0">
+                <StackLayout Padding="10, 0, 10 ,0"
+                             VerticalOptions="CenterAndExpand">
 
                 <Entry
                     x:Name="entryName"
@@ -97,7 +98,7 @@
                         Text="Crear"
                         BackgroundColor="#B40404"
                         TextColor="White"
-                        Margin="40,0,40,5"
+                        Margin="40,10,40,5"
                         FontSize="Medium"
                         BorderRadius="20"
                         VerticalOptions="End"

@@ -31,7 +31,13 @@
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
 
             <!-- -->
-            <StackLayout Padding="10, 0, 10 ,0">
+            <StackLayout Padding="10, 0, 10 ,10"
+                         VerticalOptions="FillAndExpand">
+                <Image
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    Source="https://previews.123rf.com/images/alonastep/alonastep1604/alonastep160400131/55748701-el-escudo-icono-de-la-corona-de-laurel-de-oro-con-la-corona-emblema-her%C3%A1ldico-dise%C3%B1o-del-signo-de-la-deco.jpg"
+                    />
 
                 <Entry
                     x:Name="entryName"
