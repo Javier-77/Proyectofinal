@@ -70,7 +70,7 @@ namespace F1app
             entryLugarNacimiento.Text = "";
             entryPais.Text = "";
 
-
+            ((NavigationPage)Parent).PushAsync(new ListaPilotos());
 
         }
     }

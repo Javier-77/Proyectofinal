@@ -37,62 +37,31 @@
                     x:Name="entryName"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Nombre piloto"
-                    PlaceholderColor="Gray"
-                    Margin="10,10,10,0"/>
-
-                <Entry
-                    x:Name="entryLastName"
-                    BackgroundColor="#F2F2F2"
-                    TextColor="Black"
-                    Placeholder="Apellido piloto"
+                    Placeholder="Nombre escuderia"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
 
                 <Entry
-                    x:Name="entryNumero"
+                    x:Name="entryPoints"
+                    Keyboard="Numeric"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    Placeholder="Numero piloto"
+                    Placeholder="Puntos de escuderia"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
 
                 <Entry
-                    Placeholder="Escuderia"
-                    x:Name="entryEscuderia"
+                    x:Name="entryCountry"
                     BackgroundColor="#F2F2F2"
                     TextColor="Black"
-                    PlaceholderColor="Gray"
-                    Margin="10,10,10,0"
-                    />
-
-                <Entry
                     Placeholder="Pais"
-                    x:Name="entryPais"
-                    BackgroundColor="#F2F2F2"
-                    TextColor="Black"
-                    PlaceholderColor="Gray"
-                    Margin="10,10,10,0"
-                    />
-                <Entry
-                    Placeholder="Fecha de nacimiento"
-                    x:Name="entryFechaNacimiento"
-                    BackgroundColor="#F2F2F2"
-                    TextColor="Black"
-                    PlaceholderColor="Gray"
-                    Margin="10,10,10,0"
-                    />
-                <Entry
-                    Placeholder="Lugar de nacimiento"
-                    x:Name="entryLugarNacimiento"
-                    BackgroundColor="#F2F2F2"
-                    TextColor="Black"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
 
+                
 
                 <Button
                         Text="Crear"
@@ -102,7 +71,7 @@
                         FontSize="Medium"
                         BorderRadius="20"
                         VerticalOptions="End"
-                   />
+                   Clicked="ClickButtonCreateEscuderia"/>
 
                 <Button
                         Text="Cancelar"
@@ -112,7 +81,7 @@
                         FontSize="Medium"
                         BorderRadius="20"
                         VerticalOptions="End"
-                        />
+                        Clicked="CancelarRegresar"/>
 
             </StackLayout>
 

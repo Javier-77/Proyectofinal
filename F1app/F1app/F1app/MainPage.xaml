@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:F1app"
              x:Class="F1app.MainPage"
              Title="LOGIN"
-             Icon="icono.png">
+            Icon="icon.png">
     
     
     <!-- STACK PRINCIPAL-->
@@ -76,7 +76,7 @@
                     BorderRadius="20"/>
                 
                 <Button
-                    Text="Resgistrar"
+                    Text="Registrar"
                     BackgroundColor="#B40404"
                     TextColor="White"
                     Margin="40,5,40,0"

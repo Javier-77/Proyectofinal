@@ -63,20 +63,38 @@ namespace F1app
         public void ClickUpdateUser(object sender, EventArgs e)
         {
             var mi = sender as MenuItem;
-            var item = mi.BindingContext as Pilotos;
+            var item = mi.BindingContext as User;
 
-            Pilotos pilotos = new Pilotos()
+            User user = new User()
             {
                 Id = item.Id,
-                Name = item.Name
+                Name = item.Name,
+                UserName = item.UserName,
+                LastName = item.LastName,
+                Email= item.Email,
+                Password = item.Password
             };
 
             //showWindowUpdate(user);
         }
 
+        //async public void showWindowUpdate(User user)
+        //{
+        //    await Navigation.PushAsync(new UpdatePage(user));
+        //}
+
         async public void CrearPiloto()
         {
             await ((NavigationPage)Parent).PushAsync(new CrearPiloto());
         }
+
+
+
+
+
+
+
+
+
     }
 }

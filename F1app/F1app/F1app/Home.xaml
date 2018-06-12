@@ -176,7 +176,7 @@
                     Margin="10,10,10,20"
                     FontSize="Medium"
                     BorderRadius="20"
-                      
+                      Clicked="ClickListarUsuarios"
                         HeightRequest="50"
                             WidthRequest="150"/>
                     </StackLayout>

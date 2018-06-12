@@ -36,6 +36,22 @@
                 VerticalOptions="FillAndExpand"
                 HeightRequest="150">
 
+                <StackLayout
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                    <Image
+                                Source="https://cdn.f1ne.ws/userfiles/125709.jpg"/>
+                    <Label
+                            VerticalOptions="Center"
+                            Text="Escuderias Formula 1"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            FontSize="Large"/>
+
+
+                </StackLayout>
 
                 <StackLayout
                     Orientation="Vertical"

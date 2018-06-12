@@ -27,17 +27,19 @@ namespace F1app
             await ((NavigationPage)Parent).PushAsync(new ListarPistas());
         }
 
-        async public void ClickListarUsuarios()
-        {
-            await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
-        }
+        
 
         async public void ClickListarEscuderias()
         {
             await ((NavigationPage)Parent).PushAsync(new ListarEscuderias());
         }
 
-        
+        async public void ClickListarUsuarios()
+        {
+            await ((NavigationPage)Parent).PushAsync(new ListaUsuarios());
+        }
+
+
 
         //CERRAR SESION
         async public void ClickButtonSignOff(object sender, EventArgs e)

@@ -56,7 +56,7 @@
                     Placeholder="Numero piloto"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
-                    />
+                    Keyboard="Numeric"/>
                     
                 <Entry
                     Placeholder="Escuderia"

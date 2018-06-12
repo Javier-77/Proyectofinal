@@ -58,6 +58,7 @@ namespace F1app
             entryPassword.Text = "";
 
             await DisplayAlert("Felicidades","El usuario fue creado correctamente","OK");
+            await ((NavigationPage)Parent).PushAsync(new Home());
 
         }
 

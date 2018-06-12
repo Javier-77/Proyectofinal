@@ -28,7 +28,9 @@
             BackgroundColor="Black">
 
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
-
+            
+            
+            
             <StackLayout
                 Orientation="Vertical"
                 Spacing="0"
@@ -36,6 +38,23 @@
                 VerticalOptions="FillAndExpand"
                 HeightRequest="150">
 
+
+                <StackLayout
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                    <Image
+                                Source="https://cdn.f1ne.ws/userfiles/125709.jpg"/>
+                    <Label
+                            VerticalOptions="Center"
+                            Text="Usuarios"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            FontSize="Large"/>
+
+
+                </StackLayout>
                 <!-- -->
                 <StackLayout Padding="10, 0, 10 ,0">
   
@@ -58,10 +77,9 @@
                                     </ViewCell.ContextActions>
                                     <StackLayout Padding="15,0">
 
-                                        <Label Text="{Binding UserName}" TextColor="Black"/>
+                                        <Label Text="{Binding UserName}" TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Password}" TextColor="Black"/>
-                                        
-
+                                
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
