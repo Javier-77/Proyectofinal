@@ -1,150 +1,476 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="F1app.ListaPilotos">
+             x:Class="F1app.ListaPilotos"
+             Title="PILOTOS">
   <!--Pages can be added as references or inline-->
+
 
     <!-- STACK PRINCIPAL-->
     <StackLayout
-        Orientation="Horizontal"
-        Spacing="0"
-        HorizontalOptions="FillAndExpand"
-        BackgroundColor="White">
+            Orientation="Horizontal"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="White">
 
         <!-- INICIO STACK DERECHA-->
         <BoxView
-            HorizontalOptions="Start"
-            BackgroundColor="Red"
-            WidthRequest="10"
-            />
+                HorizontalOptions="Start"
+                BackgroundColor="Red"
+                WidthRequest="10"
+                />
         <!-- FIN STACK DERECHA-->
 
         <!-- INICIO STACK CENTRAL-->
+
         <StackLayout
-            Orientation="Vertical"
-            Spacing="0"
-            HorizontalOptions="FillAndExpand"
-            BackgroundColor="Black">
+                    Orientation="Vertical"
+                    Spacing="0"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Black">
 
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
 
-            <StackLayout
-                Orientation="Vertical"
-                Spacing="0"
-                BackgroundColor="White"
-                VerticalOptions="FillAndExpand"
-                HeightRequest="150">
 
+            <StackLayout
+                        Orientation="Vertical"
+                        Spacing="0"
+                        BackgroundColor="White"
+                        VerticalOptions="FillAndExpand"
+                        HeightRequest="80">
+
+
+                <StackLayout
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                    <Image
+                                Source="https://cdn.f1ne.ws/userfiles/125709.jpg"/>
+                    <Label
+                            VerticalOptions="Center"
+                            Text="Pilotos Formula 1"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            FontSize="Large"/>
+
+
+                </StackLayout>
+
+                <!-- -->
+                <StackLayout Padding="10, 0, 10 ,0">
+
+                    <StackLayout
+                                Orientation="Horizontal">
+                        <Button
+                            Text="Crear piloto"
+                            Clicked="CrearPiloto"
+                            BackgroundColor="#B40404"
+                            TextColor="White"
+                            Margin="0, 0, 0, 5"
+                            FontSize="Medium"
+                            BorderRadius="20"
+                            />
+                        <Button
+                            Text="Listar pilotos"
+                            Clicked="ClickListar"
+                            BackgroundColor="#B40404"
+                            TextColor="White"
+                            Margin="0, 0, 0, 5"
+                            FontSize="Medium"
+                            BorderRadius="20"
+                            />
+                    </StackLayout>
+
+                </StackLayout>
+
+                <!-- -->
+
+                <!-- Inicio ScrollView de imagenes -->
 
                 <StackLayout
                     Orientation="Vertical"
                     Spacing="0"
-                    VerticalOptions="Start"
-                    >
-                    <ScrollView
-                        Orientation="Horizontal">
-                        <StackLayout
-                            Orientation="Horizontal">
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White">
 
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image11.img.1024.medium.jpg/1527498517130.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image1.img.1024.medium.jpg/1527498539662.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image1.img.1024.medium.jpg/1527779215271.jpg"/>
+                    <ScrollView>
 
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image11.img.1024.medium.jpg/1527776983299.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1722169680/image11.img.1024.medium.jpg/1527779777314.jpg"/>
+                        <StackLayout         
+                            Orientation="Vertical"
+                                VerticalOptions="FillAndExpand">
 
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_973254019/image2.img.1024.medium.jpg/1527600488196.jpg"/>
+                            <!-- listas de pistas-->
+
+                            <!--STOFFEL VANDOORNE-->
+                            <StackLayout>
+
+                                <Label
+                                                Text="STOFFEL VANDOORNE - MCLAREN"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/stoffel-vandoorne.jpg"/>
+                                        
+
+                                        <!--imagen dos-->
+
+                                        
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-7.motorsport.com/images/mgl/0ZXKwX5Y/s8/f1-italian-gp-2017-stoffel-vandoorne-mclaren-mcl32-fernando-alonso-mclaren-mcl32.jpg"/>
+                                        
+
+                                        <!--imagen tres-->
+
+                                        
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-4.motorsport.com/images/mgl/6VZrzzn6/s8/f1-monaco-gp-2017-stoffel-vandoorne-mclaren-mcl32-crash.jpg"/>
+                                        
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--SEBASTIAN VETTEL-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="SEBASTIAN VETTEL - FERRARI"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/sebastian-vettel.jpg"/>
+                                        <!--imagen dos-->
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.eluniverso.com/sites/default/files/styles/powgallery_800/public/fotos/2016/10/5307860.jpg?itok=HdA_o6BH"/>
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-6.motorsport.com/images/amp/2yo4r5v6/s6/f1-spanish-gp-2017-sebastian-vettel-ferrari-sf70h.jpg"/>
+                                        
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--KIMI RÄIKKÖNEN-->
+
+                            <StackLayout>
+                                <Label
+                                                Text="KIMI RÄIKKÖNEN - FERRARI"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/kimi-raikkonen.jpg"/>
+                                        <!--imagen dos-->
 
 
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_1126180649/image2.img.1024.medium.jpg/1527600659319.jpg"/>
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-3.motorsport.com/images/mgl/YPKwblj2/s8/f1-singapore-gp-2017-sebastian-vettel-ferrari-sf70h-max-verstappen-red-bull-racing-rb13-an.jpg"/>
 
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn.20m.es/img2/recortes/2018/03/14/657977-600-338.jpg?v=20180314161005"/>
+
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--DANIEL RICCIARDO-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="DANIEL RICCIARDO - REDBULL"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/daniel-ricciardo.jpg"/>
+
+
+                                        <!--imagen dos-->
+
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://www.caranddriver.es/themes/ee/site/CD/asset/img/contenidos/52902/red_bull_baku_accidente_1__pinned.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                        
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-pro.elsalvador.com/wp-content/uploads/2018/04/Formula-1-GP-China-01.jpg"/>
+                                        
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--FERNANDO ALONSO-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="FERNANDO ALONSO - MCLAREN"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/fernando-alonso.jpg"/>
+
+
+                                        <!--imagen dos-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2018/04/09/15232878553481.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/01/16/14845696273527.jpg"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--LEWIS HAMILTON-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="LEWIS HAMILTON - MERCEDES"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/lewis-hamilton.jpg"/>
+
+                                        <!--imagen dos-->
+
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cde.peru.com//ima/0/0/9/6/8/968919/611x458/fernando-alonso.jpg"/>
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://cdn-8.motorsport.com/images/amp/6bp9V5v2/s6/f1-australian-gp-2018-polesitter-lewis-hamilton-mercedes-amg-f1-w09-7922884.jpg"/>
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--CARLOS SAINZ-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="CARLOS SAINZ - RENAULT"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://formula1.lne.es/media/pilotos/medium/carlos-sainz.jpg"/>
+
+
+                                        <!--imagen dos-->
+
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://fotografias.antena3.com/clipping/cmsimages01/2017/10/22/A851884D-8E1D-4F6B-90B3-437EEC4D344B/58.jpg"/>
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://as01.epimg.net/motor/imagenes/2018/01/28/mas_motor/1517144563_883052_1517144600_noticia_normal.jpg"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                       
+    
+                    <StackLayout
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand">
+
+                                <Label
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                        
+                                    Text="Lista de Pilotos Activos"
+                                    TextColor="Black"
+                                    FontAttributes="Bold"
+                                    FontSize="Large"/>
+
+                                <ListView x:Name="listViewUsers">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <ViewCell.ContextActions>
+                                                    <MenuItem  Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                                                    <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                                                </ViewCell.ContextActions>
+                                                <StackLayout Padding="0,0"
+                                                 Spacing="0"
+                                                 Orientation="Horizontal">
+
+                                                    <Label
+                                            WidthRequest="30"
+                                            HeightRequest="50"
+                                            Text="{Binding Numero}"
+                                            BackgroundColor="#B40404"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalTextAlignment="Center"/>
+
+                                                    <Image
+                                            WidthRequest="80"
+                                            HeightRequest="50"
+                                            Source="{Binding Image}"
+                                            />
+
+                                                    <StackLayout
+                                            Orientation="Vertical">
+
+                                                        <Label Text="{Binding LastName}" TextColor="Black" FontAttributes="Bold"/>
+                                                        <Label Text="{Binding Country}" TextColor="Black"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
 
                         </StackLayout>
 
                     </ScrollView>
+                    <!-- -->
 
+                    
 
                 </StackLayout>
-                
-                <!-- -->
-                <StackLayout Padding="10, 0, 10 ,0">
 
-                    <Button
-                        Text="Crear piloto"
-                        Clicked="CrearPiloto"
-                        BackgroundColor="#B40404"
-                        TextColor="White"
-                        Margin="40,0,40,5"
-                        FontSize="Medium"
-                        BorderRadius="20"
-                        />
-                    <Button
-                        Text="Listar pilotos"
-                        Clicked="ClickListar"
-                        BackgroundColor="#B40404"
-                        TextColor="White"
-                        Margin="40,10,40,5"
-                        FontSize="Medium"
-                        BorderRadius="20"
-                        />
-                    <ListView x:Name="listViewUsers">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <ViewCell.ContextActions>
-                                        <MenuItem  Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
-                                        <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
-                                    </ViewCell.ContextActions>
-                                    <StackLayout Padding="15,0">
-
-                                        <Label Text="{Binding LastName}" TextColor="Black"/>
-                                        <Label Text="{Binding Numero}" TextColor="Black"/>
-
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-
-
-                <!-- -->
-
+                <!-- Fin ScrollView de imagenes -->
 
             </StackLayout>
 
             <!-- FIN STACK CENTRAL SUPERIOR-->
 
         </StackLayout>
+
         <!-- FIN STACK CENTRAL-->
 
         <!-- INICIO STACK DERECHA-->
         <BoxView
-            HorizontalOptions="End"
-            BackgroundColor="Red"
-            WidthRequest="10"
-            />
+                HorizontalOptions="End"
+                BackgroundColor="Red"
+                WidthRequest="10"
+                />
         <!-- FIN STACK DERECHA-->
     </StackLayout>
     <!-- STACK PRINCIPAL-->

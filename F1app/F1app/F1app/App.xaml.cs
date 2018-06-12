@@ -7,12 +7,15 @@ namespace F1app
 {
 	public partial class App : Application
 	{
+        public static MasterDetailPage Modificador { get; set; }
+
 		public App ()
 		{
 			InitializeComponent();
 
 			//MainPage = new MainPage();
             MainPage = new NavigationPage(new MainPage());
+            
 		}
 
 		protected override void OnStart ()

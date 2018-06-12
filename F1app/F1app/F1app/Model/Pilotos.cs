@@ -14,5 +14,6 @@ namespace F1app.Model
         public string Country { get; set; }
         public string DateBirth { get; set; }
         public string PlaceBirth { get; set; }
+        public string Image { get; set; }
     }
 }

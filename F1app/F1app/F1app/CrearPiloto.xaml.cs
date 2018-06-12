@@ -70,6 +70,8 @@ namespace F1app
             entryLugarNacimiento.Text = "";
             entryPais.Text = "";
 
+
+
         }
     }
 }

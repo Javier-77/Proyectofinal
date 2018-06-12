@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="F1app.CrearPiloto"
-             Title="CREAR PILOTO">
+             x:Class="F1app.CreateEscuderia"
+             Title="CREAR ESCUDERIA">
   <!--Pages can be added as references or inline-->
+
 
     <!-- STACK PRINCIPAL-->
     <StackLayout
@@ -29,8 +30,8 @@
 
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
 
-                <!-- -->
-                <StackLayout Padding="10, 0, 10 ,0">
+            <!-- -->
+            <StackLayout Padding="10, 0, 10 ,0">
 
                 <Entry
                     x:Name="entryName"
@@ -39,7 +40,7 @@
                     Placeholder="Nombre piloto"
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"/>
-                    
+
                 <Entry
                     x:Name="entryLastName"
                     BackgroundColor="#F2F2F2"
@@ -48,7 +49,7 @@
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
-                    
+
                 <Entry
                     x:Name="entryNumero"
                     BackgroundColor="#F2F2F2"
@@ -57,7 +58,7 @@
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
-                    
+
                 <Entry
                     Placeholder="Escuderia"
                     x:Name="entryEscuderia"
@@ -66,7 +67,7 @@
                     PlaceholderColor="Gray"
                     Margin="10,10,10,0"
                     />
-                    
+
                 <Entry
                     Placeholder="Pais"
                     x:Name="entryPais"
@@ -101,9 +102,9 @@
                         FontSize="Medium"
                         BorderRadius="20"
                         VerticalOptions="End"
-                    Clicked="ClickButtonCreatePiloto"/>
-                    
-                    <Button
+                   />
+
+                <Button
                         Text="Cancelar"
                         BackgroundColor="#B40404"
                         TextColor="White"
@@ -111,15 +112,15 @@
                         FontSize="Medium"
                         BorderRadius="20"
                         VerticalOptions="End"
-                        Clicked="CancelarRegresar"/>
-                    
-                </StackLayout>
+                        />
+
+            </StackLayout>
 
 
-                <!-- -->
+            <!-- -->
 
 
-            
+
 
             <!-- FIN STACK CENTRAL SUPERIOR-->
 

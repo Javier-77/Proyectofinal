@@ -1,119 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="F1app.ListarPistas">
+             x:Class="F1app.ListarPistas"
+             Title="PISTAS">
   <!--Pages can be added as references or inline-->
-
-<!-- 
-    <StackLayout Padding="10, 20, 10 ,0">
-        <Button
-            Text="Crear pista"
-            Clicked="CrearPista"/>
-
-        <Button
-            Text="Listar pistas"
-            Clicked="ClickListarPistas"/>
-        
-        <ListView x:Name="listViewUsers">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
-                            <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
-                        </ViewCell.ContextActions>
-                        <StackLayout Padding="15,0">
-
-                            <Label Text="{Binding Name}" />
-                            <Label Text="{Binding CountryPrix}" />
-
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
--->
 
     <!-- STACK PRINCIPAL-->
     <StackLayout
-        Orientation="Horizontal"
-        Spacing="0"
-        HorizontalOptions="FillAndExpand"
-        BackgroundColor="White">
+            Orientation="Horizontal"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="White">
 
         <!-- INICIO STACK DERECHA-->
         <BoxView
-            HorizontalOptions="Start"
-            BackgroundColor="Red"
-            WidthRequest="10"
-            />
+                HorizontalOptions="Start"
+                BackgroundColor="Red"
+                WidthRequest="10"
+                />
         <!-- FIN STACK DERECHA-->
 
         <!-- INICIO STACK CENTRAL-->
+
         <StackLayout
-            Orientation="Vertical"
-            Spacing="0"
-            HorizontalOptions="FillAndExpand"
-            BackgroundColor="Black">
+                    Orientation="Vertical"
+                    Spacing="0"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Black">
 
             <!-- INICIO STACK CENTRAL SUPERIOR IMAGEN-->
 
+
             <StackLayout
-                Orientation="Vertical"
-                Spacing="0"
-                BackgroundColor="White"
-                VerticalOptions="FillAndExpand"
-                HeightRequest="150">
+                        Orientation="Vertical"
+                        Spacing="0"
+                        BackgroundColor="White"
+                        VerticalOptions="FillAndExpand"
+                        HeightRequest="150">
 
 
                 <StackLayout
-                    Orientation="Vertical"
-                    Spacing="0"
-                    VerticalOptions="Start"
-                    >
-                    <ScrollView
-                        Orientation="Horizontal">
-                        <StackLayout
-                            Orientation="Horizontal">
-
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image11.img.1024.medium.jpg/1527498517130.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery/image1.img.1024.medium.jpg/1527498539662.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image1.img.1024.medium.jpg/1527779215271.jpg"/>
-
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1209357976/image11.img.1024.medium.jpg/1527776983299.jpg"/>
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/features/2018/5/gallery--f1_s-greatest-ever-tribute-helmets/_jcr_content/featureContent/manual_gallery_1722169680/image11.img.1024.medium.jpg/1527779777314.jpg"/>
-
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_973254019/image2.img.1024.medium.jpg/1527600488196.jpg"/>
-
-
-                            <Image
-                    HeightRequest="250"
-                    WidthRequest="250"
-                    Source="https://www.formula1.com/content/fom-website/en/latest/technical/2018/5/tech-tuesday--5-key-monaco-modifications/_jcr_content/featureContent/manual_gallery_1126180649/image2.img.1024.medium.jpg/1527600659319.jpg"/>
-
-
-                        </StackLayout>
-
-                    </ScrollView>
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                    <Image
+                            Source="https://cdn.f1ne.ws/userfiles/125709.jpg"/>
+                    <Label
+                            VerticalOptions="Center"
+                            Text="Pistas Formula 1"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            FontSize="Large"/>
 
 
                 </StackLayout>
@@ -121,65 +59,384 @@
                 <!-- -->
                 <StackLayout Padding="10, 0, 10 ,0">
 
-                    <Button
-                        Text="Crear pista"
-                        Clicked="CrearPista"
-                        BackgroundColor="#B40404"
-                        TextColor="White"
-                        Margin="40,0,40,5"
-                        FontSize="Medium"
-                        BorderRadius="20"
-                        />
-                    <Button
-                        Text="Listar pistas"
-                        Clicked="ClickListarPistas"
-                        BackgroundColor="#B40404"
-                        TextColor="White"
-                        Margin="40,10,40,5"
-                        FontSize="Medium"
-                        BorderRadius="20"
-                        />
-                    <ListView x:Name="listViewUsers">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <ViewCell.ContextActions>
-                                        <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
-                                        <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
-                                    </ViewCell.ContextActions>
-                                    <StackLayout Padding="15,0">
+                    <StackLayout
+                                Orientation="Horizontal">
+                        <Button
+                                    Text="Crear pista"
+                                    Clicked="CrearPista"
+                                    BackgroundColor="#B40404"
+                                    Margin="0,0,0,10"
+                                    TextColor="White"
+                                    FontSize="Medium"
+                                    BorderRadius="20"
+                                    />
+                        <Button
+                                    Text="Listar pistas"
+                                    Clicked="ClickListarPistas"
+                                    Margin="0,0,0,10"
+                                    BackgroundColor="#B40404"
+                                    TextColor="White"
+                                    FontSize="Medium"
+                                    BorderRadius="20"
+                                    />
+                    </StackLayout>
 
-                                        <Label Text="{Binding Name}" />
-                                        <Label Text="{Binding CountryPrix}" />
-
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
                 </StackLayout>
-
 
                 <!-- -->
 
+                <!-- Inicio ScrollView de imagenes -->
+
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="0"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White">
+
+                    <ScrollView>
+
+                        <StackLayout         
+                            Orientation="Vertical"
+                                VerticalOptions="FillAndExpand">
+
+                            <!-- listas de pistas-->
+
+
+                            <!--Gran Premio de Australia -->
+                            <StackLayout>
+                                <Label
+                                                Text="Gran Premio de Australia"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="10, 10, 10, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                        
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.motor.es/f1/fotos-fichasgp/gp-australia/gp-australia.jpg"/>
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://moto-journal.fr/wp-content/uploads/2014/10/18701.jpg?_ga=2.66970861.2128893009.1528388274-507180476.1528388274"/>
+                                       
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://s3-ap-southeast-2.amazonaws.com/v8supercars.com.au/live/images/dmImage/StandardImage/AP_trackmap.jpg"/>
+                                       
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de China -->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="Gran Premio de China "
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="10, 10, 10, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://img.vavel.com/directos-6860901634.jpg"/>
+                                        
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://2605ag1lk6qv1zesxa14vbp2.wpengine.netdna-cdn.com/wp-content/uploads/2018/04/GPChina2.jpg"/>
+    
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://s3.amazonaws.com/la-motorbit-media/wp-content/uploads/2015/04/china_shanghai_f1_2013-1-1024x597.jpg"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de Bahréin-->
+
+                            <StackLayout>
+                                <Label
+                                                Text="Gran Premio de Bahréin"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                            
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.razine.com/assets/images/content/razine_2013/abril_2013/bahrein.1.jpg"/>
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.motor.es/f1/fotos-fichasgp/gp-bahrein/gp-bahrein.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://800noticias.com/cms/wp-content/uploads/2015/04/GP-bahrein.jpg"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de Rusia-->
+
+                            <StackLayout>
+                                <Label
+                                                Text="Gran Premio de Rusia"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://www.noticias-f1.com/wp-content/uploads/2014/10/gran_premio_rusia-f1_2014.jpg"/>
+
+
+                                        <!--imagen dos-->
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://marketingdeportivomd.com/wp-content/uploads/2017/02/gp-rusia.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://i.eurosport.com/equinoxe/2015/05/19/1551237-33022040-2560-1440.jpg?w=1350"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de España-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="Gran Premio de España"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://www.formula-racing.es/wp-content/uploads/Montmelo.jpg"/>
+
+
+                                        <!--imagen dos-->
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.catalunyapress.es/multimedia/images/montmelo.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://soymotor.com/sites/default/files/styles/mega/public/imagenes/article/image-2018-05-09.jpg?itok=wf477j6l"/>
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de Mónaco-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="Gran Premio de Mónaco"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 5"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://www.motorpoint.com/fotos/8/9h83lu.jpg"/>
+
+
+                                        <!--imagen dos-->
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://ep00.epimg.net/elpais/imagenes/2015/05/23/album/1432381237_296727_1432381312_album_normal.jpg"/>
+
+
+                                        <!--imagen tres-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://epmghispanic.media.clients.ellingtoncms.com/img/photos/2017/05/28/gran-premio-formula1-monaco_t750x550.jpg?d885fc46c41745b3b5de550c70336c1b382931d2"/>
+
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <!--Gran Premio de Canadá-->
+
+                            <StackLayout>
+
+                                <Label
+                                                Text="Gran Premio de Canadá"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="50, 10, 50, 10"
+                                                TextColor="Black"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"/>
+                                <ScrollView Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://www.f1enestadopuro.com/wp-content/uploads/2014/06/circuito-canada1.jpg"/>
+
+
+                                        <!--imagen dos-->
+
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="http://www.mixaficiones.com/gestor_web/gestor_pv/imgpv_pv/542/542a_hb_5656d3ab6f5e0.jpg"/>
+
+
+                                        <!--imagen tres-->
+                                            <Image
+                                                HeightRequest="250"
+                                                WidthRequest="250"
+                                                Source="https://pasoporcurva.files.wordpress.com/2008/06/montreal.jpg"/>
+
+                                    </StackLayout>
+                                </ScrollView>
+
+                            </StackLayout>
+
+                            <StackLayout
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand">
+
+                                <Label
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                        
+                                    Text="Lista de Pistas Activas"
+                                    TextColor="Black"
+                                    FontAttributes="Bold"
+                                    FontSize="Large"/>
+
+                                <ListView x:Name="listViewUsers">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <ViewCell.ContextActions>
+                                                    <MenuItem Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                                                    <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                                                </ViewCell.ContextActions>
+                                                <StackLayout Padding="15,0">
+
+                                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                                    <Label Text="{Binding CountryPrix}" />
+
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+
+                            <!-- -->
+
+                        </StackLayout>
+
+                    </ScrollView>
+
+                </StackLayout>
+
+                <!-- Fin ScrollView de imagenes -->
 
             </StackLayout>
 
             <!-- FIN STACK CENTRAL SUPERIOR-->
 
         </StackLayout>
+
         <!-- FIN STACK CENTRAL-->
 
         <!-- INICIO STACK DERECHA-->
         <BoxView
-            HorizontalOptions="End"
-            BackgroundColor="Red"
-            WidthRequest="10"
-            />
+                HorizontalOptions="End"
+                BackgroundColor="Red"
+                WidthRequest="10"
+                />
         <!-- FIN STACK DERECHA-->
     </StackLayout>
+    
+    
     <!-- STACK PRINCIPAL-->
-
+   
 
 
 

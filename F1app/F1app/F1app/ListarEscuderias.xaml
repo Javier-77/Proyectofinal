@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="F1app.Home"
-             Title="HOME">
+             x:Class="F1app.ListarEscuderias"
+             Title="ESCUDERIAS">
   <!--Pages can be added as references or inline-->
-    
 
     <!-- STACK PRINCIPAL-->
     <StackLayout
@@ -37,25 +36,11 @@
                 VerticalOptions="FillAndExpand"
                 HeightRequest="150">
 
-                <StackLayout
-                            Orientation="Vertical"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="FillAndExpand"
-                            BackgroundColor="Black">
-                    <Image
-                        HeightRequest="150"
-                        WidthRequest="150"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Source="logo2nuevo.jpg"/>
 
-                </StackLayout>
-         
                 <StackLayout
                     Orientation="Vertical"
                     Spacing="0"
-                    Margin="0,10,0,0"
-                    VerticalOptions="Center"
+                    VerticalOptions="Start"
                     >
                     <ScrollView
                         Orientation="Horizontal">
@@ -103,86 +88,62 @@
 
                 </StackLayout>
 
-                <StackLayout
-                    Orientation="Vertical"
-                    Spacing="0"
-                    VerticalOptions="FillAndExpand">
+                <!-- -->
+                <StackLayout 
+                             Orientation="Horizontal"
+                    HorizontalOptions="Center">
 
-                    <StackLayout
-                        Orientation="Horizontal"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand">
-                        <Button
-                    x:Name="ListPistas"
-                    Text="Pistas"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,0"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                            HeightRequest="80"
-                            WidthRequest="150"
-                    Clicked="pasarPistas"/>
-
-                        <Button
-                    x:Name="ListCorredores"
-                    Text="Corredores"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,0"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                        Clicked="listaPilotos"
-                            HeightRequest="80"
-                            WidthRequest="150"/>
-
-                    </StackLayout>
-                    <StackLayout
-                        Orientation="Horizontal"
-                        HorizontalOptions="CenterAndExpand"
-                        Padding="0,0,0,10">
                     <Button
-                    x:Name="listUsuarios"
-                    Text="Escuderias"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,0"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                        Clicked="ClickListarEscuderias"
-                        HeightRequest="80"
-                            WidthRequest="150"/>
-                    
-                    
+                        Text="Crear"
+                        Clicked="CrearEscuderia"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="0,0,0,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        />
                     <Button
-                    x:Name="CerrarSesion"
-                    Text="Cerrar sesion"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,0"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                      Clicked="ClickButtonSignOff"  
-                        HeightRequest="80"
-                            WidthRequest="150"/>
-                    </StackLayout>
-
-                    <StackLayout>
-                        <Button
-                    x:Name="ListarUsuarios"
-                    Text="Usuarios"
-                    BackgroundColor="#B40404"
-                    TextColor="White"
-                    Margin="10,10,10,20"
-                    FontSize="Medium"
-                    BorderRadius="20"
-                      
-                        HeightRequest="50"
-                            WidthRequest="150"/>
-                    </StackLayout>
-
-    
+                        Text="Listar"
+                        Clicked="ClickListar"
+                        BackgroundColor="#B40404"
+                        TextColor="White"
+                        Margin="0,0,0,5"
+                        FontSize="Medium"
+                        BorderRadius="20"
+                        />
                 </StackLayout>
+                <StackLayout>
+                    <ListView x:Name="listViewUsers">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem  Clicked="ClickUpdateUser" CommandParameter="{Binding .}" Text="Actualizar" />
+                                        <MenuItem  Clicked="ClickDeleteUser" CommandParameter="{Binding Id}" Text="Eliminar" IsDestructive="True" />
+                                    </ViewCell.ContextActions>
+                                    <StackLayout Padding="15,0"
+                                                 Orientation="Horizontal">
+                                        <Image
+                                            WidthRequest="80"
+                                            HeightRequest="50"
+                                            Source="{Binding Image}"
+                                            />
+                                        <StackLayout
+                                            Orientation="Vertical">
+
+                                        <Label Text="{Binding Name}" TextColor="Black" FontSize="15" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding Country}" TextColor="Black"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+
+                <!-- -->
+
 
             </StackLayout>
 
@@ -202,5 +163,5 @@
     <!-- STACK PRINCIPAL-->
 
 
- 
+
 </ContentPage>

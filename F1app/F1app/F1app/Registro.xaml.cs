@@ -63,6 +63,11 @@ namespace F1app
 
         async public void CancelarRegresar()
         {
+            entryUserName.Text = "";
+            entryName.Text = "";
+            entryLastName.Text = "";
+            entryEmail.Text = "";
+            entryPassword.Text = "";
             await ((NavigationPage)Parent).PushAsync(new MainPage());
 
         }

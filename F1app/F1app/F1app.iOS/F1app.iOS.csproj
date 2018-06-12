@@ -165,4 +165,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\agregarPista.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\llanta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
 </Project>
